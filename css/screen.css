@@ -293,6 +293,11 @@ body {
       body main footer a:nth-child(2) .label {
         float: left;
         margin: 13px 13px 0 0; }
+  body.page-login {
+    text-align: center;
+    background-color: #e13a2b; }
+    body.page-login #logo-carglass img {
+      width: 200px; }
   body.page-jobs main > div {
     display: flex; }
     body.page-jobs main > div aside {
