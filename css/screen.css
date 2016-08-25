@@ -1,0 +1,424 @@
+@font-face {
+  font-family: 'Open sans light';
+  src: url("../fonts/open-sans/OpenSans-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Open sans';
+  src: url("../fonts/open-sans/OpenSans.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Open sans bold';
+  src: url("../fonts/open-sans/OpenSans-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Open sans extra bold';
+  src: url("../fonts/open-sans/OpenSans-Extrabold.ttf") format("truetype"); }
+body {
+  font-family: 'Open sans', serif;
+  margin: 0;
+  /******************* common **********************/
+  /**************************/
+  /**************************/
+  /**************************/
+  /*****************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /********** type of pages *************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/ }
+  body a, body a:hover {
+    text-decoration: none; }
+  body h2 {
+    font-size: 2.5rem;
+    font-family: "Open sans light";
+    font-weight: normal;
+    margin: 30px 0 7px 0; }
+  body label {
+    font-family: "Open sans bold";
+    color: #999999; }
+  body address {
+    font-style: normal; }
+  body .availability {
+    color: #999999;
+    font-size: 0.8rem; }
+  body .notes {
+    color: #999999;
+    padding: 15px;
+    border: 1px solid #999999; }
+    body .notes b {
+      font-family: "Open sans bold";
+      /*font-size: 1.2rem;*/ }
+    body .notes p {
+      font-size: 0.8rem; }
+  body .container-custom {
+    display: flex;
+    overflow: hidden; }
+    body .container-custom .half {
+      width: 50%; }
+    body .container-custom .third-one {
+      width: 33.333%; }
+    body .container-custom .third-two {
+      width: 66.666%; }
+    body .container-custom .quarter-one {
+      width: 25%; }
+    body .container-custom .quarter-three {
+      width: 75%; }
+  body .spacer-small {
+    height: 7px; }
+  body .spacer-medium {
+    height: 15px; }
+  body .spacer-big {
+    height: 30px; }
+  body .padder-top-medium {
+    padding-top: 15px; }
+  body .padder-top-big {
+    padding-top: 30px; }
+  body .padder-bottom-big {
+    padding-bottom: 30px; }
+  body .slice {
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: auto; }
+  body .bkg-grey-bright {
+    background-color: #e6e6e6; }
+  body input[type="text"] {
+    height: 44px;
+    border: none;
+    outline: none;
+    /*width: 100%;*/
+    padding: 0 15px;
+    font-size: 1rem;
+    /*border: 1px solid $grey-dark;*/ }
+    body input[type="text"].outlined {
+      border: 1px solid #999999; }
+  body input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    /*border: 1px solid $grey-dark;*/
+    background-color: white; }
+    body input[type="checkbox"]:checked {
+      background-image: url("../images/checkbox-black.svg");
+      background-position: 5px 5px;
+      background-size: 77%;
+      background-repeat: no-repeat; }
+    body input[type="checkbox"]:focus {
+      outline: none; }
+    body input[type="checkbox"].outlined {
+      border: 1px solid #999999; }
+  body > header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e13a2b;
+    color: white;
+    text-align: center;
+    /*height: 44px;*/
+    padding: 20px 0 3px 0; }
+    body > header a:hover {
+      opacity: 0.8; }
+    body > header div.back {
+      /*width: 200px;*/
+      /*float: left;*/ }
+      body > header div.back a {
+        display: block;
+        height: 100%;
+        padding: 9px 0 0 9px;
+        color: white; }
+        body > header div.back a img {
+          width: 25px;
+          height: 25px;
+          transform: rotate(180deg);
+          margin-right: 10px; }
+        body > header div.back a .label {
+          display: block;
+          float: right; }
+    body > header h1 {
+      margin: 9px 0 0 0;
+      text-transform: uppercase;
+      font-size: 1rem; }
+    body > header .burger-menu {
+      /*width: 200px;*/
+      /*float: right;*/ }
+      body > header .burger-menu a {
+        display: block;
+        /*height: 100%;*/
+        padding: 9px 9px 0 0; }
+        body > header .burger-menu a img {
+          width: 25px;
+          height: 25px; }
+      body > header .burger-menu section {
+        display: none; }
+      body > header .burger-menu.open section {
+        display: block;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        background-color: #bc2d26;
+        width: 35%;
+        height: 100%;
+        box-shadow: 0 0 100px #000; }
+        body > header .burger-menu.open section > div {
+          overflow: auto; }
+          body > header .burger-menu.open section > div a {
+            float: right; }
+        body > header .burger-menu.open section ul {
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+          body > header .burger-menu.open section ul li a {
+            color: white; }
+          body > header .burger-menu.open section ul.languages {
+            display: flex;
+            justify-content: center; }
+            body > header .burger-menu.open section ul.languages li {
+              display: inline; }
+              body > header .burger-menu.open section ul.languages li a {
+                width: 49px;
+                height: 38px;
+                padding: 13px 2px 0 0;
+                margin: 0 15px;
+                display: inline-block;
+                border: 1px solid white;
+                border-radius: 999px;
+                text-align: center; }
+              body > header .burger-menu.open section ul.languages li.active a {
+                background-color: white;
+                color: #bc2d26; }
+          body > header .burger-menu.open section ul.sections li a {
+            border-top: 1px solid #e13a2b;
+            padding: 12px 0; }
+          body > header .burger-menu.open section ul.sections li:last-child a {
+            border-bottom: 1px solid #e13a2b; }
+  body main #progress-bar {
+    background-color: #bc2d26;
+    height: 44px;
+    text-align: center; }
+    body main #progress-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; }
+      body main #progress-bar ul li {
+        /*display: inline;*/
+        overflow: hidden;
+        height: 44px; }
+        body main #progress-bar ul li a {
+          display: inline-block;
+          position: relative;
+          color: #e13a2b;
+          width: 100px;
+          height: 100%;
+          padding-top: 9px;
+          padding-left: 20px;
+          /*border: 1px solid green;*/ }
+          body main #progress-bar ul li a:before {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            border-top: 1px solid #e13a2b;
+            border-right: 1px solid #e13a2b;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -1px; }
+          body main #progress-bar ul li a:before {
+            /*background-color: green;*/
+            /*float: left;*/
+            left: -32px; }
+          body main #progress-bar ul li a:after {
+            /*background-color: blue;*/
+            /*float: right;*/
+            right: -12px; }
+        body main #progress-bar ul li.active {
+          z-index: 9997; }
+          body main #progress-bar ul li.active a {
+            z-index: 9997;
+            background-color: #e13a2b;
+            color: white;
+            /*&:after {
+            	background-color: $red-medium;
+            	z-index: 9999;
+            	}*/ }
+            body main #progress-bar ul li.active a:before {
+              background-color: #bc2d26; }
+        body main #progress-bar ul li.active + li a:before {
+          background-color: #e13a2b; }
+        body main #progress-bar ul li.previous {
+          /*border: 3px solid green;*/ }
+  body main .customer-details {
+    display: flex; }
+    body main .customer-details > div:nth-child(2) {
+      margin-left: 30px; }
+  body main .job-details {
+    display: flex; }
+    body main .job-details address {
+      margin-left: 30px; }
+  body main footer {
+    /*background-color: blue;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0; }
+    body main footer a {
+      text-transform: uppercase;
+      display: block; }
+      body main footer a:hover {
+        opacity: 0.6; }
+      body main footer a img {
+        width: 50px;
+        height: 50px; }
+    body main footer a:nth-child(1) {
+      color: #999999; }
+      body main footer a:nth-child(1) img {
+        transform: rotate(180deg); }
+      body main footer a:nth-child(1) .label {
+        float: right;
+        margin: 13px 0 0 13px; }
+    body main footer a:nth-child(2) {
+      color: #e13a2b; }
+      body main footer a:nth-child(2) .label {
+        float: left;
+        margin: 13px 13px 0 0; }
+  body.page-jobs main > div {
+    display: flex; }
+    body.page-jobs main > div aside {
+      background-color: #e6e6e6;
+      width: 25%; }
+      body.page-jobs main > div aside ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        body.page-jobs main > div aside ul li:first-child {
+          padding: 10px 0;
+          text-align: center;
+          color: #999999; }
+        body.page-jobs main > div aside ul li {
+          border-bottom: 1px solid #999999; }
+          body.page-jobs main > div aside ul li a {
+            display: block;
+            padding: 30px 15px;
+            color: black;
+            /*&:after {
+            	content: "";
+            	display: block;
+            	width: 40px;
+            	height: 40px;
+            	background-color: blue;
+            	border-radius: 999px;
+            	}*/ }
+            body.page-jobs main > div aside ul li a:hover {
+              opacity: 0.6; }
+            body.page-jobs main > div aside ul li a b {
+              /*color:green;*/
+              font-family: "Open sans extra bold"; }
+            body.page-jobs main > div aside ul li a .eurocode, body.page-jobs main > div aside ul li a .vehicule {
+              color: #999999;
+              font-size: 0.8rem; }
+          body.page-jobs main > div aside ul li.active {
+            background-color: #e13a2b; }
+            body.page-jobs main > div aside ul li.active a {
+              color: #f49898; }
+              body.page-jobs main > div aside ul li.active a b {
+                color: white; }
+              body.page-jobs main > div aside ul li.active a .eurocode, body.page-jobs main > div aside ul li.active a .vehicule {
+                color: #f49898; }
+  body.page-jobs main #job-details {
+    width: 75%;
+    padding: 0 30px;
+    /*background-color: blue;*/ }
+  body.page-job-details main .slice .garage-and-billing {
+    margin-top: 38px;
+    color: #999999; }
+    body.page-job-details main .slice .garage-and-billing h3 {
+      margin: 0; }
+    body.page-job-details main .slice .garage-and-billing p {
+      margin: 0; }
+    body.page-job-details main .slice .garage-and-billing .garage {
+      margin-bottom: 15px; }
+  body.page-job-details main .slice .vehicule-details {
+    background-color: #e6e6e6; }
+    body.page-job-details main .slice .vehicule-details label {
+      display: block;
+      text-align: right;
+      padding: 0 10px 0 0; }
+    body.page-job-details main .slice .vehicule-details form label {
+      padding: 10px 10px 0 0; }
+  body.page-check-main .scheme {
+    border: 1px solid #999999;
+    position: relative; }
+    body.page-check-main .scheme .casualty-id {
+      position: absolute; }
+      body.page-check-main .scheme .casualty-id:nth-child(1) {
+        top: 120px;
+        left: 200px; }
+      body.page-check-main .scheme .casualty-id:nth-child(2) {
+        top: 60px;
+        left: 320px; }
+      body.page-check-main .scheme .casualty-id:nth-child(3) {
+        top: 120px;
+        left: 410px; }
+    body.page-check-main .scheme span {
+      color: #999999;
+      font-size: 0.8rem;
+      margin: 10px; }
+    body.page-check-main .scheme > div {
+      text-align: center; }
+  body.page-check-main form {
+    text-align: right; }
+  body.page-check-main .casualty-id {
+    color: white;
+    font-family: "Open sans extra bold";
+    background-color: #e13a2b;
+    border-radius: 999px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 30px;
+    float: left; }
+  body.page-check-main ul.casualties {
+    background-color: #e6e6e6;
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0; }
+    body.page-check-main ul.casualties li {
+      padding: 15px; }
+      body.page-check-main ul.casualties li:not(:last-child) {
+        border-bottom: 1px solid #999999; }
+      body.page-check-main ul.casualties li header a {
+        display: block;
+        float: right;
+        padding: 0 5px; }
+        body.page-check-main ul.casualties li header a img {
+          width: 35px;
+          opacity: 0.5; }
+      body.page-check-main ul.casualties li p {
+        clear: both; }
+  body.page-items table {
+    width: 100%; }
+    body.page-items table th {
+      padding: 10px 5px;
+      text-align: left;
+      background-color: #e6e6e6;
+      color: #999999;
+      font-size: 0.8rem; }
+    body.page-items table td {
+      padding: 0 5px;
+      border-bottom: 1px solid #e6e6e6;
+      /*margin: 0;*/ }
+
+/*# sourceMappingURL=screen.css.map */

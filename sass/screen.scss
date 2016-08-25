@@ -1,0 +1,658 @@
+$red-bright: #f49898;
+$red-medium : #e13a2b;
+$red-dark : #bc2d26;
+$red-darker : #8b201c;
+$grey-brightest : #e6e6e6;
+$grey-dark : #999999;
+
+@font-face {
+	font-family: 'Open sans light';
+	src:url("../fonts/open-sans/OpenSans-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Open sans';
+	src:url("../fonts/open-sans/OpenSans.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Open sans bold';
+	src:url("../fonts/open-sans/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Open sans extra bold';
+	src:url("../fonts/open-sans/OpenSans-Extrabold.ttf") format("truetype");
+}
+
+
+
+
+body {
+	font-family: 'Open sans', serif;
+	margin: 0;
+	/******************* common **********************/
+	a, a:hover {
+		text-decoration: none;
+	}
+	h2 {
+		font-size: 2.5rem;
+		font-family: "Open sans light";
+		font-weight: normal;
+		margin: 30px 0 7px 0;
+	}
+	label {
+		font-family: "Open sans bold";
+		color: $grey-dark;
+	}
+	address{
+		font-style: normal;
+	}
+	.availability {
+		color:$grey-dark;
+		font-size: 0.8rem;
+
+	}
+	.notes {
+		color: $grey-dark;
+		padding: 15px;
+		border:1px solid $grey-dark;
+		b {
+			font-family: "Open sans bold";
+			/*font-size: 1.2rem;*/
+		}
+		p{
+			font-size: 0.8rem;
+		}
+	}
+	.container-custom {
+		display: flex;
+		overflow: hidden;
+		.half {
+			width: 50%;
+		}
+		.third-one {
+			width: 33.333%;
+		}
+		.third-two {
+			width: 66.666%;
+		}
+		.quarter-one {
+			width: 25%;
+		}
+		.quarter-three {
+			width: 75%;
+		}
+		
+	}
+	/**************************/
+	.spacer-small {
+		height: 7px;
+	}
+	.spacer-medium {
+		height: 15px;
+	}
+	.spacer-big {
+		height: 30px;
+	}
+	/**************************/
+	.padder-top-medium {
+		padding-top: 15px;
+	}
+	.padder-top-big {
+		padding-top: 30px;
+	}
+	.padder-bottom-big {
+		padding-bottom: 30px;
+	}
+	
+	/**************************/
+	.slice {
+		padding-left: 30px;
+		padding-right: 30px;
+		overflow: auto;
+	}
+	.bkg-grey-bright {
+		background-color: $grey-brightest;
+	}
+	input[type="text"] {
+		height: 44px;
+		border: none;
+		outline: none;
+		/*width: 100%;*/
+		padding: 0 15px;
+		font-size: 1rem;
+		/*border: 1px solid $grey-dark;*/
+		&.outlined {
+			border:1px solid $grey-dark;
+		}
+	}
+	input[type="checkbox"] {
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		width: 44px;
+		height: 44px;
+		margin: 0;
+		/*border: 1px solid $grey-dark;*/
+		background-color: white;
+		&:checked { 
+			background-image:url("../images/checkbox-black.svg");
+			background-position: 5px 5px;
+			background-size: 77%;
+			background-repeat: no-repeat;
+		}
+		&:focus{
+			outline: none;
+		}
+		&.outlined {
+			border:1px solid $grey-dark;
+		}
+	}
+	/*****************************************/
+	& > header {
+		display: flex;
+		justify-content: space-between;
+		background-color:$red-medium;
+		color:white;
+		text-align: center;
+		/*height: 44px;*/
+		padding: 20px 0 3px 0;
+		a:hover {
+			opacity:0.8;
+		}
+		div.back {
+			/*width: 200px;*/
+			/*float: left;*/
+			a {
+				display: block;
+				height: 100%;
+				padding: 9px 0 0 9px;
+				color: white;
+
+				img {
+					width:25px;
+					height: 25px;
+					transform: rotate(180deg);
+					margin-right: 10px;
+				}
+				.label {
+					display: block;
+					float: right;
+				}
+			}
+		}
+		h1 {
+			margin: 9px 0 0 0;
+			text-transform: uppercase;
+			font-size: 1rem;
+		}
+		.burger-menu {
+			/*width: 200px;*/
+			/*float: right;*/
+			a {
+				display: block;
+				/*height: 100%;*/
+				padding: 9px 9px 0 0;
+
+				img {
+					width:25px;
+					height: 25px;
+				}
+			}
+			section {
+				display: none;
+			}
+			&.open {
+				section {
+					display: block;
+					position: absolute;
+					z-index: 999;
+					top:0;
+					right: 0;
+					background-color: $red-dark;
+					width: 35%;
+					height: 100%;
+					box-shadow: 0 0 100px #000;
+					& > div {
+						overflow: auto;
+						a {
+							float: right;
+						}
+					}
+					ul {
+						list-style: none;
+						padding: 0;
+						margin: 0;
+
+						li{
+							a{
+								color:white;
+							}
+						}
+						&.languages {
+							display: flex;
+							justify-content: center;
+							li {
+								display: inline;
+								a {
+									width: 49px;
+									height: 38px;
+									padding: 13px 2px 0 0;
+									margin: 0 15px;
+									display: inline-block;
+									border:1px solid white;
+									border-radius: 999px;
+									text-align: center;
+
+								}
+								&.active {
+									a {
+										background-color: white;
+										color:$red-dark;
+									}
+									
+								}
+							}
+						}
+						&.sections {
+							li {
+								a {
+									border-top:1px solid $red-medium;
+									padding: 12px 0;
+								}
+								&:last-child{
+									a {
+										border-bottom:1px solid $red-medium;	
+									}
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	main {
+		
+		#progress-bar {
+			background-color: $red-dark;
+			height: 44px;
+			text-align: center;
+			ul {
+				list-style: none;
+				margin: 0;
+				padding:0;
+				display: flex;
+				justify-content: center;
+				li {
+					/*display: inline;*/
+					overflow: hidden;
+					height: 44px;
+					a {
+						display: inline-block;
+						position: relative;
+						color: $red-medium;
+						width: 100px;
+						height: 100%;
+						padding-top: 9px;
+						padding-left: 20px;
+						/*border: 1px solid green;*/
+						&:before {
+							content:"";
+							display: block;
+							width: 44px;
+							height: 44px;
+							border-top: 1px solid $red-medium;
+							border-right: 1px solid $red-medium;
+							transform: rotate(45deg);
+							position: absolute;
+							
+							top: -1px;
+						}
+						&:before {
+							/*background-color: green;*/
+							/*float: left;*/
+							left: -32px;
+						}
+						&:after {
+							/*background-color: blue;*/
+							/*float: right;*/
+							right: -12px;
+						}
+					}
+					&.active {
+						z-index: 9997;
+						a {
+							z-index: 9997;
+							background-color: $red-medium;
+							color: white;
+
+							&:before {
+								background-color: $red-dark;
+							}
+							/*&:after {
+								background-color: $red-medium;
+								z-index: 9999;
+								}*/
+							}
+
+						}
+						&.active + li {
+							a {
+								&:before{
+									background-color: $red-medium;
+								}
+							}
+						}
+						&.previous {
+							/*border: 3px solid green;*/
+						}
+					}
+
+				}
+			}		
+			.customer-details {
+				display: flex;
+				& > div:nth-child(2){
+					margin-left:30px;
+				}
+			}
+			.job-details {
+				display: flex;
+				address{
+					margin-left:30px;
+				}
+			}
+			footer {
+				/*background-color: blue;*/
+				display: flex;
+				justify-content: space-between;
+				padding: 15px 0;
+				a {
+					text-transform: uppercase;
+					display: block;
+					&:hover {
+						opacity:0.6;
+					}
+					img {
+						width:50px;
+						height: 50px;
+					}
+				}
+				a:nth-child(1) {
+					color: $grey-dark;
+					img {
+						transform: rotate(180deg);
+					}
+					.label {
+						float: right;
+						margin: 13px 0 0 13px;
+					}
+				}
+				a:nth-child(2) {
+					color: $red-medium;
+					.label {
+						float: left;
+						margin: 13px 13px 0 0;
+					}
+				}
+			}
+		}
+		/****************************************************************************/
+		/****************************************************************************/
+		/****************************************************************************/
+		/****************************************************************************/
+		/********** type of pages *************************************************/
+		/****************************************************************************/
+		/****************************************************************************/
+		/****************************************************************************/
+		/****************************************************************************/
+		&.page-login {
+
+		}
+		/****************************************************************************/
+		&.page-jobs {
+			main {
+				& > div{
+					display: flex;
+					aside {
+						background-color: $grey-brightest;
+						width: 25%;
+						ul {
+							list-style: none;
+							padding: 0;
+							margin: 0;
+							li:first-child {
+								padding:10px 0;
+								text-align:center;
+								color:$grey-dark;
+
+							}
+							li {
+								border-bottom: 1px solid $grey-dark;
+								a {
+									display: block;
+									padding: 30px 15px;
+									color:black;
+									&:hover {
+										opacity:0.6;
+									}
+									b {
+										/*color:green;*/
+										font-family: "Open sans extra bold";
+									}
+									.hour {
+
+									}
+									address{
+
+									}
+									.eurocode, .vehicule {
+										color:$grey-dark;
+										font-size: 0.8rem;
+									}
+								/*&:after {
+									content: "";
+									display: block;
+									width: 40px;
+									height: 40px;
+									background-color: blue;
+									border-radius: 999px;
+									}*/
+
+								}
+								&.active {
+									background-color: $red-medium;
+									a {
+										color:$red-bright;
+										b {
+											color:white;
+										}
+										.hour {
+
+										}
+										address{
+
+										}
+										.eurocode, .vehicule {
+											color:$red-bright;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				#job-details {
+					width: 75%;
+					padding: 0 30px;
+					/*background-color: blue;*/
+
+				}
+			}
+		}
+		/****************************************************************************/
+		&.page-job-details {
+			main {
+				.slice {
+
+
+					.garage-and-billing {
+						margin-top: 38px;
+						color:$grey-dark;
+						h3 {
+							margin: 0;
+						}
+						p {
+							margin: 0;
+						}
+						.garage {
+							margin-bottom: 15px;
+						}
+						.billing {
+
+						}
+					}
+					.vehicule-details {
+						background-color: $grey-brightest;
+						label {
+							display: block;
+							text-align: right;
+							padding:0 10px 0 0;
+						}
+						form {
+							label {
+								padding:10px 10px 0 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		/****************************************************************************/
+		&.page-check-main {
+			.scheme {
+				border:1px solid $grey-dark;
+				position: relative;
+				.casualty-id {
+					position: absolute;
+					&:nth-child(1) {
+						top:120px;
+						left: 200px;
+					}
+					&:nth-child(2) {
+						top:60px;
+						left: 320px;
+					}
+					&:nth-child(3) {
+						top:120px;
+						left: 410px;
+					}
+				}
+				
+				span {
+					color: $grey-dark;
+					font-size: 0.8rem;
+					margin: 10px;
+				}
+				& > div {
+					text-align: center;
+					img {
+
+					}
+				}
+
+			}
+			form {
+				text-align: right;
+				label {
+
+				}
+				input {
+
+				}
+			}
+			.casualty-id {
+				color: white;
+				font-family: "Open sans extra bold";
+				background-color: $red-medium;
+				border-radius: 999px;
+				padding-top: 5px;
+				display: inline-block;
+				text-align: center;
+				width: 35px;
+				height: 30px;
+				float: left;
+			}
+			ul.casualties {
+				background-color: $grey-brightest;
+				list-style: none;
+				margin: 0 0 0 15px;
+				padding: 0;
+				li {
+					padding: 15px;
+					&:not(:last-child) {
+						border-bottom:1px solid $grey-dark;	
+					}
+					
+					header {
+						a {
+							display: block;
+							float: right;
+							padding: 0 5px;
+							img {
+								width: 35px;
+								opacity: 0.5;
+							}
+						}
+					}
+					p {
+						clear: both;
+					}
+
+				}
+			}
+		}
+		/****************************************************************************/
+		&.page-check-secondary {
+
+		}
+		/****************************************************************************/
+		&.page-injuries-seen {
+
+		}
+		/****************************************************************************/
+		&.page-signature {
+
+		}
+		/****************************************************************************/
+		&.page-execution {
+
+		}
+		/****************************************************************************/
+		&.page-items {
+			table {
+				width: 100%;
+				th {
+					padding: 10px 5px;
+					text-align: left;
+					background-color: $grey-brightest;
+					color: $grey-dark;
+					font-size: 0.8rem;
+				}
+				td {
+					padding: 0 5px;
+					border-bottom:1px solid $grey-brightest;
+					/*margin: 0;*/
+				}
+			}
+		}
+		/****************************************************************************/
+		&.page-tmd {
+
+		}
+
+	}
+
+
+
+
