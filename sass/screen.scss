@@ -32,6 +32,55 @@ body {
 	a, a:hover {
 		text-decoration: none;
 	}
+
+
+
+
+
+				a.arrowed {
+					text-transform: uppercase;
+					display: inline-block;
+					&:hover {
+						opacity:0.6;
+					}
+					img {
+						width:50px;
+						height: 50px;
+					}
+				}
+				a.arrowed-white {
+					color: white;
+				}
+				a.arrowed-grey {
+					color: $grey-dark;
+				}
+				a.arrowed-red {
+					color: $red-medium;
+				}
+				a.arrowed.arrowed-left {
+					
+					img {
+						transform: rotate(180deg);
+					}
+					.label {
+						float: right;
+						margin: 13px 0 0 13px;
+					}
+				}
+				a.arrowed.arrowed-right {
+					.label {
+						float: left;
+						margin: 13px 13px 0 0;
+					}
+				}
+
+
+
+
+
+
+
+
 	h2 {
 		font-size: 2.5rem;
 		font-family: "Open sans light";
@@ -61,6 +110,16 @@ body {
 		p{
 			font-size: 0.8rem;
 		}
+	}
+	.notes-terms-and-conditions {
+		color: black;
+		background-color: $grey-brightest;
+		max-height: 180px;
+		overflow-y: scroll;
+	}
+	.notes-signature {
+		color: black;
+		height: 180px;
 	}
 	.container-custom {
 		display: flex;
@@ -112,7 +171,7 @@ body {
 	.bkg-grey-bright {
 		background-color: $grey-brightest;
 	}
-	input[type="text"] {
+	input[type="text"], input[type="password"], , input[type="tel"] {
 		height: 44px;
 		border: none;
 		outline: none;
@@ -146,7 +205,64 @@ body {
 			border:1px solid $grey-dark;
 		}
 	}
+	.select-wrapper {
+		position: relative;
+		width: 197px;
+		background-color: white;
+		background-image: url("../images/arrow-black-down.svg");
+		background-position: right 5px top 5px;
+		background-size: 35px;
+		background-repeat: no-repeat;
+		select {
+		    font-size: 1rem;
+		    border-radius: 0px;
+		    border:none;
+		    color: black;
+		    padding: 0 0 0 15px;
+		    height: 44px;
+		    width: 100%;
+		    background: none;
+		    appearance: none;
+		    -webkit-appearance: none;
+		}
+		select:active {
+		    /*border: 1px solid #000;*/
+		}
+		/*select + img.select-arrow {
+			transform: rotate(90deg);
+			width: 40px;
+			position: absolute;
+			top: 0;
+			right: 5px;
+		}*/
+		/*select + .select-arrow {
+			width: 40px;
+			height: 40px;
+			background-image: url("../images/van.png");
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			right:0;
+		}*/
+	}
 	/*****************************************/
+	.injuries-list {
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						input[type="checkbox"] {
+
+						}
+						label {
+							position: absolute;
+							margin: 10px 0 0 5px;
+						}
+					}
+				}
+			}
+			/*****************************************/
 	& > header {
 		display: flex;
 		justify-content: space-between;
@@ -272,7 +388,7 @@ body {
 		}
 	}
 	main {
-		
+		div {
 		#progress-bar {
 			background-color: $red-dark;
 			height: 44px;
@@ -396,8 +512,7 @@ body {
 					}
 				}
 			}
-		}
-		/****************************************************************************/
+			/****************************************************************************/
 		/****************************************************************************/
 		/****************************************************************************/
 		/****************************************************************************/
@@ -415,11 +530,42 @@ body {
 				}
 				
 			}
+			#logo-digivan {
+				img {
+					width: 100px;
+					opacity: 0.2;
+				}
+				div {
+					margin-top: -15px;
+					span {
+						opacity: 0.2;
+						font-size: 2.5rem;
+						&:nth-child(1) {
+							font-family:"Open sans light";
+						}
+						&:nth-child(2) {
+							font-family:"Open sans extra bold";
+						}
+					}
+				}
+
+			}
+			form{
+					input {
+						width: 300px;
+					}
+					a.question-mark {
+						position: absolute;
+						padding-left: 5px;
+						img {
+							width: 44px;
+						}
+					}
+				}
 		}
 		/****************************************************************************/
 		&.page-jobs {
-			main {
-				& > div{
+			
 					display: flex;
 					aside {
 						background-color: $grey-brightest;
@@ -487,7 +633,7 @@ body {
 								}
 							}
 						}
-					}
+					
 				}
 				#job-details {
 					width: 75%;
@@ -495,11 +641,11 @@ body {
 					/*background-color: blue;*/
 
 				}
-			}
+			
 		}
 		/****************************************************************************/
 		&.page-job-details {
-			main {
+		
 				.slice {
 
 
@@ -533,7 +679,7 @@ body {
 						}
 					}
 				}
-			}
+			
 		}
 		/****************************************************************************/
 		&.page-check-main {
@@ -625,15 +771,44 @@ body {
 		}
 		/****************************************************************************/
 		&.page-injuries-seen {
+			
+			.notes {
+				b {
 
+				}
+				.edit {
+					float: right;
+					border:1px solid $grey-dark;
+					margin: 0 0 10px 10px;
+					img {
+						opacity: 0.5;
+						width: 35px;
+					}
+				}
+				p {
+
+				}
+			}
 		}
 		/****************************************************************************/
 		&.page-signature {
-
+			.details {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 		}
 		/****************************************************************************/
 		&.page-execution {
-
+			.execution-details {
+				margin-right: 15px;
+				background-color: $grey-brightest;
+				label {
+					padding:10px 10px 0 0;
+					text-align: right;
+				}
+						
+			}
 		}
 		/****************************************************************************/
 		&.page-items {
@@ -656,6 +831,8 @@ body {
 		/****************************************************************************/
 		&.page-tmd {
 
+		}
+		}
 		}
 
 	}
