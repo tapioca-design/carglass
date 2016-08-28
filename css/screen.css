@@ -134,7 +134,7 @@ body {
       border: 1px solid #999999; }
   body .select-wrapper {
     position: relative;
-    width: 197px;
+    /*width: 197px;*/
     background-color: white;
     background-image: url("../images/arrow-black-down.svg");
     background-position: right 5px top 5px;
@@ -156,6 +156,8 @@ body {
     	top: 0;
     	right:0;
     }*/ }
+    body .select-wrapper.outlined {
+      border: 1px solid #999999; }
     body .select-wrapper select {
       font-size: 1rem;
       border-radius: 0px;
@@ -169,6 +171,58 @@ body {
       -webkit-appearance: none; }
     body .select-wrapper select:active {
       /*border: 1px solid #000;*/ }
+  body .casualty-id {
+    color: white;
+    font-family: "Open sans extra bold";
+    background-color: #e13a2b;
+    border-radius: 999px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 30px;
+    float: left; }
+  body .popup .window-container {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/ }
+    body .popup .window-container .window {
+      width: 500px;
+      position: absolute;
+      left: -250px;
+      top: 30%;
+      z-index: 9999;
+      padding: 15px;
+      background: white;
+      /*height: 200px;*/
+      margin: auto 50%; }
+      body .popup .window-container .window header {
+        text-align: center;
+        padding-bottom: 20px; }
+        body .popup .window-container .window header a {
+          position: absolute;
+          right: 13px; }
+          body .popup .window-container .window header a img {
+            width: 20px; }
+        body .popup .window-container .window header h1 {
+          font-family: "Open sans light";
+          font-size: 1.6rem;
+          margin: 0; }
+      body .popup .window-container .window footer {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 25px; }
+        body .popup .window-container .window footer a {
+          text-transform: uppercase; }
+  body .popup .overlay {
+    position: absolute;
+    z-index: 9998;
+    /*top: 0;*/
+    /**/
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.5; }
   body .injuries-list ul {
     list-style: none;
     margin: 0;
@@ -479,17 +533,6 @@ body {
         text-align: center; }
     body main div.page-check-main form {
       text-align: right; }
-    body main div.page-check-main .casualty-id {
-      color: white;
-      font-family: "Open sans extra bold";
-      background-color: #e13a2b;
-      border-radius: 999px;
-      padding-top: 5px;
-      display: inline-block;
-      text-align: center;
-      width: 35px;
-      height: 30px;
-      float: left; }
     body main div.page-check-main ul.casualties {
       background-color: #e6e6e6;
       list-style: none;
@@ -520,6 +563,7 @@ body {
       align-items: center;
       justify-content: center; }
     body main div.page-execution .execution-details {
+      padding: 0 30px 0 0;
       margin-right: 15px;
       background-color: #e6e6e6; }
       body main div.page-execution .execution-details label {
