@@ -22,11 +22,21 @@ $grey-dark : #999999;
 	src:url("../fonts/open-sans/OpenSans-Extrabold.ttf") format("truetype");
 }
 
+/*ipad mini 2: 1024 x 768*/
+html, main, main .page-login {
+	height: 100%;
+}
+body {
+	/* 768 - 23 = */
+	height: 745px;
+}
+
 
 
 
 body {
 	font-family: 'Open sans', serif;
+	/*background-color: $red-medium;*/
 	margin: 0;
 	/******************* common **********************/
 	a, a:hover {
@@ -300,6 +310,8 @@ body {
 					padding-top: 25px;
 					a {
 						text-transform: uppercase;
+						/*border:1px solid red;*/
+						padding: 15px;
 					}
 				}
 			}
@@ -330,6 +342,8 @@ body {
 						label {
 							position: absolute;
 							margin: 10px 0 0 5px;
+							/* max width stands for getting on 2 lines if too long */
+							max-width: 500px;
 						}
 					}
 				}

@@ -10,8 +10,17 @@
 @font-face {
   font-family: 'Open sans extra bold';
   src: url("../fonts/open-sans/OpenSans-Extrabold.ttf") format("truetype"); }
+/*ipad mini 2: 1024 x 768*/
+html, main, main .page-login {
+  height: 100%; }
+
+body {
+  /* 768 - 23 = */
+  height: 745px; }
+
 body {
   font-family: 'Open sans', serif;
+  /*background-color: $red-medium;*/
   margin: 0;
   /******************* common **********************/
   /**************************/
@@ -213,7 +222,9 @@ body {
         justify-content: space-around;
         padding-top: 25px; }
         body .popup .window-container .window footer a {
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          /*border:1px solid red;*/
+          padding: 15px; }
   body .popup .overlay {
     position: absolute;
     z-index: 9998;
@@ -229,7 +240,9 @@ body {
     padding: 0; }
     body .injuries-list ul li label {
       position: absolute;
-      margin: 10px 0 0 5px; }
+      margin: 10px 0 0 5px;
+      /* max width stands for getting on 2 lines if too long */
+      max-width: 500px; }
   body > header {
     display: flex;
     justify-content: space-between;
